@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "salary",
     "age"
 })
-@Generated("jsonschema2pojo")
+@Generated("jsonschema2pojo") 
 public class DummyRequest {
 
     @JsonProperty("name")

@@ -13,9 +13,9 @@ public class TestDummy {
     String sal = "12000";
     String age = "32";
 
-    int employeeId =10; // we can give input here
+    int employeeId =2; // we can give input here
 
-    @Test
+    @Test(enabled=true)
     public void testCreateEmployee() throws JsonProcessingException {
 
         CreateEmployeeResponse employee = dummyHelper.createEmployee(name, sal, age);
@@ -27,7 +27,7 @@ public class TestDummy {
 
     }
 
-    @Test
+    @Test(enabled=true)
     public void testGetEmployee() throws JsonProcessingException {
 
         GetEmployeeResponse getEmployeeResponse = dummyHelper.getEmployee(employeeId);
@@ -38,7 +38,7 @@ public class TestDummy {
         Assert.assertEquals(getEmployeeResponse.getStatus(), "success", "status is not same");
 
     }
-    @Test
+    @Test(enabled=true)
     public void testDeleteEmployee() throws JsonProcessingException {
 
 

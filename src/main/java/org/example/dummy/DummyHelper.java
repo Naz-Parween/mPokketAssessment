@@ -52,12 +52,14 @@ public class DummyHelper {
     }
 
     public DummyResponse deleteEmployee(int id) throws JsonProcessingException {
-        pathParam = "delete/";
+        pathParam = "public/api/v1/delete/";
         finalUrl = baseUrl+pathParam+id;
         System.out.println("hitting url: "+ finalUrl);
 
-        Response response = RestAssured.get(finalUrl);
+       // Response response = RestAssured.get(finalUrl);  404 not found
+        Response response = RestAssured.delete(finalUrl); //successfully deleted
         int statusCode = response.getStatusCode();
+  
         System.out.println("status code is : "+ statusCode);
         ObjectMapper objectMapper = new ObjectMapper();
         DummyResponse dummyResponse = objectMapper.readValue(response.prettyPrint(), DummyResponse.class);

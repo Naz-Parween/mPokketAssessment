@@ -1,4 +1,3 @@
-
 package org.example.dummy.pojos;
 
 import java.util.HashMap;
@@ -22,10 +21,13 @@ public class DummyResponse {
 
     @JsonProperty("status")
     private String status;
+    
     @JsonProperty("data")
-    private EmployeeCreateResponseData employeeCreateResponseData;
+    private String data;
+    
     @JsonProperty("message")
     private String message;
+    
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -40,13 +42,13 @@ public class DummyResponse {
     }
 
     @JsonProperty("data")
-    public EmployeeCreateResponseData getData() {
-        return employeeCreateResponseData;
+    public void getData() {
+    	this.data = data;
     }
 
     @JsonProperty("data")
-    public void setData(EmployeeCreateResponseData employeeCreateResponseData) {
-        this.employeeCreateResponseData = employeeCreateResponseData;
+    public void setData(String data) {
+        this.data = data;
     }
 
     @JsonProperty("message")
