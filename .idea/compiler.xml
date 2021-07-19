@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dummy" />
         <module name="RestAssuredGangBoard" />
+        <module name="mPokketAssessment" />
       </profile>
     </annotationProcessing>
   </component>
